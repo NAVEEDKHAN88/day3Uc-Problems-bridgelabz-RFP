@@ -1,26 +1,28 @@
 package usecases;
 
 public class EmployeeWagemain {
+    public static final int isFullTime = 1;
+    public static final int isPartTime = 2;
     public static void main(String[] args) {
-        int isFullTime = 1;
-        int isPartTime = 2;
+
         int empRatePerhr = 20;
         int empHr = 0;
-        int empWage=0;
-        double randomCheck = Math.floor(Math.random() * 10) % 3;
+        int empWage = 0;
+        int randomCheck = (int) Math.floor(Math.random() * 10) % 3;
 
-        if (randomCheck == isFullTime)
-            empHr = 8;
+        switch (randomCheck) {
+            case  isFullTime:
+                empHr = 8;
+                break;
+            case isPartTime:
+                empHr = 4;
+                break;
+            default:
+                empHr=0;
 
-        else if (randomCheck == isPartTime)
-            empHr=4;
-        else
-            empHr = 0;
-
-
-
-        empWage = empHr*empRatePerhr;
-        System.out.println("Employee Wage is :"+empWage);
+        }
+        empWage=empHr*empRatePerhr;
+        System.out.println("EmpWage is :" + empWage);
     }
         }
 
