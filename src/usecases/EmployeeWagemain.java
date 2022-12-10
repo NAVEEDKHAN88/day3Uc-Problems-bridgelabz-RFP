@@ -1,6 +1,6 @@
 package usecases;
 
-public class UseCase2 {
+public class EmployeeWagemain {
     public static void main(String[] args) {
         int isFullTime = 1;
         int empRatePerhr = 20;
